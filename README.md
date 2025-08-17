@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# 📄 AI Meeting Summarizer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An AI-powered meeting summarizer that helps you quickly generate and share concise meeting notes.
 
-## Available Scripts
+## 🚀 Features
+- Accepts meeting transcripts (paste text or upload `.txt` files)
+- Custom instructions (e.g., *"Make action items bullet points"*)
+- Uses **Groq LLM API** to generate smart summaries
+- Manual editing before sending
+- Send summaries via email (mocked – no SMTP cost!)
+---
+##  Live Demo
+- **Backend (API):** [https://mongodesk.onrender.com/](https://mongodesk.onrender.com/)  
+- **Frontend (User Interface):** [https://mongodesk.vercel.app/](https://mongodesk.vercel.app/)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🛠️ Tech Stack
+- **Backend:** Node.js, Express
+- **AI/LLM:** Groq API
+- **Frontend:** React
+- **Other:** Multer (file upload), Nodemailer (mock email)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📦 Installation
+```bash
+# Clone the repo
+git clone https://github.com/your-username/ai-meeting-summarizer.git
+cd ai-meeting-summarizer
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Install dependencies
+npm install
+```
+## 📂 Project Structure
+```bash
+meeting-summarizer/
+│── backend/
+│   ├── server.js         # Express server
+│   ├── package.json
+│   └── .env              # GROQ_API_KEY
+│
+│── frontend/
+│   ├── src/
+│   │   └── App.jsx       # React frontend
+│   ├── package.json
+│   └── .env              # VITE_API_BASE
+│
+└── README.md
+```
+### 🧪 API Endpoints
+```bash
+POST /summarize
 
-### `npm test`
+Generates a summary from transcript + custom prompt.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+{
+  "transcript": "Meeting transcript text...",
+  "instruction": "Summarize into 5 bullet points"
+}
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Response:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+{
+  "summary": "AI generated summary text..."
+}
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+POST /send-summary
 
-### `npm run eject`
+Mocks sending the summary via email.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+{
+  "to": ["test@example.com"],
+  "subject": "Meeting Summary",
+  "body": "AI generated summary..."
+}
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Response:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+{
+  "success": true,
+  "message": "Summary sent successfully"
+}
+```
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
