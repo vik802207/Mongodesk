@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 
-const API_BASE = 'http://localhost:8080';
+const API_BASE = 'https://mongodesk.onrender.com/';
 
 export default function App() {
   const [transcript, setTranscript] = useState('');
