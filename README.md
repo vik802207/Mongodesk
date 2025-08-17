@@ -20,6 +20,18 @@ An AI-powered meeting summarizer that helps you quickly generate and share conci
 - **AI/LLM:** Groq API
 - **Frontend:** React
 - **Other:** Multer (file upload), Nodemailer (mock email)
+## 🖼️ Screenshot
+![App Screenshot](https://github.com/vik802207/Mongodesk/blob/main/img/Screenshot%20(779).png)
+![App Screenshot](https://github.com/vik802207/Mongodesk/blob/main/img/Screenshot%20(780).png)
+![App Screenshot](https://github.com/vik802207/Mongodesk/blob/main/img/Screenshot%20(781).png)
+![App Screenshot](https://github.com/vik802207/Mongodesk/blob/main/img/Screenshot%20(782).png)
+![App Screenshot](https://github.com/vik802207/Mongodesk/blob/main/img/Screenshot%20(783).png)
+![App Screenshot](https://github.com/vik802207/Mongodesk/blob/main/img/Screenshot%20(784).png)
+![App Screenshot](https://github.com/vik802207/Mongodesk/blob/main/img/Screenshot%20(785).png)
+![App Screenshot](https://github.com/vik802207/Mongodesk/blob/main/img/Screenshot%20(786).png)
+![App Screenshot](https://github.com/vik802207/Mongodesk/blob/main/img/Screenshot%20(787).png)
+![App Screenshot](https://github.com/vik802207/Mongodesk/blob/main/img/Screenshot%20(788).png)
+![App Screenshot](https://github.com/vik802207/Mongodesk/blob/main/img/Screenshot%20(789).png)
 
 ## 📦 Installation
 ```bash
